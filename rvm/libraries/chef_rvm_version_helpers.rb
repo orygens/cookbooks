@@ -38,7 +38,7 @@ class Chef
 
         Chef::Log.debug "RVM version = #{version} (#{user || 'system'})"
 
-        version
+        version.gsub!('-', '.')
       end
     end
   end
